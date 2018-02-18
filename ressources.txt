@@ -1,0 +1,1 @@
+https://angularjs.de/artikel/ngupgrade-migration-angularjs-angular/
