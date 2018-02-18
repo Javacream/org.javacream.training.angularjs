@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular_new_books_rest</title>
+</head>
+<body data-ng-app="angular_new_books_rest">
+	<div data-ng-controller="angular_new_books_rest_controller">
+		<form name="newBookForm">
+			<input type="text" data-ng-model="book.title" required></input> <input
+				type="number" data-ng-model="book.price" name="price" min="1"
+				integer></input><input type="number"
+				data-ng-model="book.pages" min="0" integer></input> <input
+				data-ng-value="add_button" type="submit" data-ng-click="add(book)"
+				ng-disabled="!newBookForm.$valid"></input>
+			<hr />
+		</form>
+	</div>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+	<script type="text/javascript"
+		src="../js/custom_validator_directives.js"></script>
+	<script type="text/javascript" src="../js/angular_new_books_rest.js"></script>
+</body>
+</html>

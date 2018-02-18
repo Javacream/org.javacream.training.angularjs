@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<div data-ng-app="" data-ng-init="user = {given_name: 'Hugo'}">
+		<div>
+			<h2>Welcome {{user.given_name + ' ' + user.given_name.length + ' ' + window.alert('Hello')}}</h2>
+		</div>
+		<hr />
+		<div>
+			<p>
+				Enter your Givenname: <input type="text"
+					data-ng-model="user.given_name">
+			</p>
+			<p>
+				Enter your Lastname: <input type="text"
+					data-ng-model="user.lastname">
+			</p>
+			<p>
+				Hello <span data-ng-bind="{{user.given_name + ' ' + user.lastname}}"></span>!
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+ </body>
+</html>

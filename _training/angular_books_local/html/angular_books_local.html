@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular_books_local</title>
+</head>
+<body data-ng-app="angular_books_local">
+	<div data-ng-controller="books_view_controller">
+		<p data-ng-controller="books_clock_controller" data-ng-bind="time"></p>
+		<div data-ng-controller="books_controller">
+			<input type="text" data-ng-model="book.isbn"></input> <input
+				type="text" data-ng-model="book.title"></input> <input type="text"
+				data-ng-model="book.price"></input> <input type="text"
+				data-ng-model="book.pages"></input> <input
+				data-ng-value="add_button" type="button" data-ng-click="add()"></input>
+			<hr />
+			<div data-ng-repeat="_book in books">
+				<p data-ng-click="remove($index)"
+					data-ng-bind="_book.isbn + ' ' + _book.title"></p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+	<script type="text/javascript" src="../js/angular_books_local.js"></script>
+</body>
+</html>

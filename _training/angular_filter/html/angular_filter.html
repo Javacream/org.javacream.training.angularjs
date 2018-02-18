@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular_filter</title>
+</head>
+<body data-ng-app="angular_filter">
+	<div ng-controller="Controller">
+		<p ng-bind="number | currency" />
+		<p ng-bind="message | uppercase" />
+		<p ng-bind="message | titlecase" />
+	</div>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+	<script type="text/javascript" src="../js/angular_filter.js"></script>
+</body>
+</html>

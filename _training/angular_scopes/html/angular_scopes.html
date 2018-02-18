@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular_scopes</title>
+</head>
+<body data-ng-app="angular_scopes">
+	Outside: {{message}}
+	<div ng-controller="OuterController">
+		Outer Controller: {{message}}
+		<div nd-controller="MiddleController">Middle Controller:
+			{{message}}</div>
+		<div ng-controller="InnerController">
+			Inner Controller: {{message}} 
+			<hr />
+			<input type="button"
+				ng-click="action()" value="Send event" />
+		</div>
+	</div>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+	<script type="text/javascript" src="../js/angular_scopes.js"></script>
+</body>
+</html>

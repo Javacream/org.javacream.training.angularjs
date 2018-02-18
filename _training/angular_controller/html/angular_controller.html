@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular_controller</title>
+</head>
+<body data-ng-app="angular_controller">
+	<div data-ng-controller="simple_controller">
+		<input type="button" value="Click me" data-ng-click="action()"></input>
+		<input type="text" value="Change me" data-ng-model="user.name"></input>
+		<input type="text" value="EGAL" data-ng-model="dies.und.das"></input>
+		{{message}}
+	</div>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+	<script type="text/javascript" src="../js/angular_controller.js"></script>
+</body>
+</html>

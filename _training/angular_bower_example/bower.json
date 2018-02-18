@@ -1,0 +1,17 @@
+{
+  "name": "angular_bower_example",
+  "authors": [
+    "Rainer Sawitzki <training@rainer-sawitzki.de>"
+  ],
+  "description": "a simple example",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "javacream.org",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,25 @@
+<project basedir="." name="create-js" default="copy">
+	<target name="copy">
+		<input message="enter project name" addproperty="js.project.name"></input>
+		<property name="js.project.dir" value="../_training/${js.project.name}"/>
+		<property name="js.project.html.dir" value="${js.project.dir}/html"/>
+		<property name="js.project.js.dir" value="${js.project.dir}/js"/>
+		<mkdir dir="${js.project.dir}" />
+		<mkdir dir="${js.project.html.dir}" />
+		<mkdir dir="${js.project.js.dir}" />
+		<copy tofile="${js.project.html.dir}/${js.project.name}.html">
+			<filterset>
+				<filter token="name" value="${js.project.name}"/>
+			</filterset>
+			<fileset dir="template/html" includes="template.html">
+			</fileset>
+		</copy>
+		<copy tofile="${js.project.js.dir}/${js.project.name}.js">
+			<filterset>
+				<filter token="name" value="${js.project.name}"/>
+			</filterset>
+			<fileset dir="template/js" includes="template">
+			</fileset>
+		</copy>
+	</target>
+</project>

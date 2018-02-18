@@ -1,0 +1,5 @@
+<p> THE BEATLES</p>
+<ul>
+		<li data-ng-repeat="(instrument, player) in the_beatles">{{instrument}}
+			= <a ng-href="#/beatles/{{player.given_name}}">{{player.given_name + ' ' + player.name}}</a></li>
+</ul>

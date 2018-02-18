@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular_directives</title>
+</head>
+<body data-ng-app=""
+	data-ng-init="beatle_names = ['John', 'Paul', 'George', 'Ringo']; beatles={lead_guitar: 'Georges', drums: 'Ringo', bass: 'Paul', rythm_guitar: 'John'}">
+	<h3>ng-repeat</h3>
+	<ul>
+		<li data-ng-repeat="beatle in beatle_names">{{beatle}}</li>
+	</ul>
+	<ul>
+		<li data-ng-repeat="(instrument, player) in beatles">{{instrument}}
+			= {{player}}</li>
+	</ul>
+	<hr />
+	<h3>ng-if</h3>
+	<p data-ng-if="beatle_names.length > 5">no way...</p>
+	<p data-ng-if="beatle_names.length === 5">No we have 5 beatles</p>
+	<p data-ng-if="beatle_names.length === 4">There are four beatles</p>
+	<hr />
+	<h3>ng-click</h3>
+	<input type="text" data-ng-model="new_player.name" />
+	<input type="text" data-ng-model="new_player.instrument" />
+	<button
+		data-ng-click="beatles[new_player.instrument] = new_player.name; beatle_names.push(new_player.name)">Add
+		Beatle</button>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+</body>
+</html>

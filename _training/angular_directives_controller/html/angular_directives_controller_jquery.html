@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>angular_directives_controller</title>
+</head>
+<body data-ng-app="angular_directives_controller"
+	data-ng-controller="SimpleController">
+	<h3>ng-repeat</h3>
+	<ul>
+		<li data-ng-repeat="beatle in beatle_names">{{beatle}}</li>
+	</ul>
+	<ul>
+		<li data-ng-repeat="(instrument, player) in beatles">{{instrument}}
+			= {{player}}</li>
+	</ul>
+	<hr />
+	<h3>ng-if</h3>
+	<p data-ng-if="beatle_names.length > 5">no way...</p>
+	<p data-ng-if="beatle_names.length === 5">No we have 5 beatles</p>
+	<p data-ng-if="beatle_names.length === 4">There are four beatles</p>
+	<hr />
+	<h3>ng-click</h3>
+	<input type="text" id="new_player_name"/>
+	<input type="text" id="new_player_instrument"/>
+	<button
+		data-ng-click="add_beatle()">Add
+		Beatle</button>
+	<script type="text/javascript" src="../../../lib/angular.js"></script>
+	<script type="text/javascript" src="../js/angular_directives_controller_jquery.js"></script>
+</body>
+</html>
